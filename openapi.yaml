@@ -1,0 +1,250 @@
+openapi: 3.0.3
+info:
+  title: Board API
+  version: 1.0.0
+  description: API for managing boards and words.
+servers:
+  - url: http://localhost:8080
+    description: Local server
+paths:
+  /boards:
+    post:
+      summary: Create a new board
+      operationId: createBoard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateBoardRequest'
+      responses:
+        '200':
+          description: Board created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BoardResponse'
+        '422':
+          description: Unprocessable Entity (Serialization Error)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /boards/{id}:
+    get:
+      summary: Get a board by ID
+      operationId: getBoard
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The ID of the board to retrieve
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Board retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BoardResponse'
+        '404':
+          description: Board Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /boards/{id}/words:
+    patch:
+      summary: Add a word to a board
+      operationId: addWordToBoard
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The ID of the board
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddWordRequest'
+      responses:
+        '202':
+          description: Word accepted and added to the board
+          content:
+            application/json:
+              schema:
+                type: string
+                description: Returns the Board ID
+        '404':
+          description: Board Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Conflict (Board Expired)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '422':
+          description: Unprocessable Entity (Serialization Error)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /boards/{id}/events:
+    get:
+      summary: Get Server-Sent Events (SSE) for a board
+      operationId: getBoardEvents
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The ID of the board
+          schema:
+            type: string
+      responses:
+        '200':
+          description: SSE stream of board events
+          content:
+            text/event-stream:
+              schema:
+                $ref: '#/components/schemas/BoardEvent'
+        '404':
+          description: Board Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    CreateBoardRequest:
+      type: object
+      required:
+        - question
+        - ttl
+      properties:
+        question:
+          type: string
+          description: The question for the board
+        ttl:
+          type: integer
+          format: int64
+          description: Time-to-live in seconds
+
+    AddWordRequest:
+      type: object
+      required:
+        - word
+      properties:
+        word:
+          type: string
+          description: The word to add to the board
+
+    BoardResponse:
+      type: object
+      required:
+        - id
+        - question
+        - expiresAt
+        - words
+      properties:
+        id:
+          type: string
+          description: The unique identifier of the board
+        question:
+          type: string
+          description: The board's question
+        expiresAt:
+          type: string
+          format: date-time
+          description: When the board expires
+        words:
+          type: object
+          additionalProperties:
+            type: integer
+          description: A map of words and their counts
+
+    ErrorResponse:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+          description: A description of the error
+        cause:
+          type: string
+          nullable: true
+          description: Optional detail or root cause of the error
+
+    BoardEvent:
+      type: object
+      discriminator:
+        propertyName: eventType
+      required:
+        - eventType
+        - boardId
+      properties:
+        eventType:
+          type: string
+          description: The type of the event (word-added or board-created)
+        boardId:
+          type: string
+          description: The ID of the board the event relates to
+
+    WordAddedEvent:
+      allOf:
+        - $ref: '#/components/schemas/BoardEvent'
+        - type: object
+          required:
+            - word
+          properties:
+            word:
+              $ref: '#/components/schemas/Word'
+
+    BoardCreatedEvent:
+      allOf:
+        - $ref: '#/components/schemas/BoardEvent'
+
+    Word:
+      type: object
+      required:
+        - value
+      properties:
+        value:
+          type: string
+          description: The word text
