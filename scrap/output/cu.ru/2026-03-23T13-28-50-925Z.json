@@ -1,0 +1,857 @@
+{
+  "url": "https://cu.ru/",
+  "extractedAt": "2026-03-23T13:28:50.918Z",
+  "siteName": null,
+  "logo": null,
+  "favicons": [
+    {
+      "type": "icon",
+      "url": "https://cu.ru/assets/kit/favicon/fav.png",
+      "sizes": "32x32"
+    },
+    {
+      "type": "icon",
+      "url": "https://cu.ru/assets/kit/favicon/favicon-32x32.png",
+      "sizes": "32x32"
+    },
+    {
+      "type": "icon",
+      "url": "https://cu.ru/assets/kit/favicon/safari-pinned-tab.svg",
+      "sizes": "any"
+    },
+    {
+      "type": "apple-touch-icon",
+      "url": "https://cu.ru/assets/kit/favicon/android-chrome-192x1.png",
+      "sizes": null
+    },
+    {
+      "type": "apple-touch-icon",
+      "url": "https://cu.ru/assets/kit/favicon/android-chrome-192x1.png",
+      "sizes": null
+    },
+    {
+      "type": "og:image",
+      "url": "https://static.centraluniversity.ru/app/site/meta/og-image.png",
+      "sizes": null
+    },
+    {
+      "type": "favicon.ico",
+      "url": "https://cu.ru/favicon.ico",
+      "sizes": null
+    }
+  ],
+  "colors": {
+    "semantic": {
+      "primary": "rgb(255, 255, 255)",
+      "secondary": "rgba(0, 0, 0, 0)"
+    },
+    "palette": [
+      {
+        "color": "rgb(255, 255, 255)",
+        "normalized": "#ffffff",
+        "count": 2280,
+        "confidence": "high",
+        "sources": [
+          "header",
+          "logo",
+          "vi-link"
+        ],
+        "lch": "lch(100% 0 158.2)",
+        "oklch": "oklch(100% 0 89.88)"
+      },
+      {
+        "color": "rgb(20, 20, 20)",
+        "normalized": "#141414",
+        "count": 375,
+        "confidence": "high",
+        "sources": [
+          "redirect-button",
+          "social-button"
+        ],
+        "lch": "lch(6.32% 0 158.2)",
+        "oklch": "oklch(19.13% 0 89.88)"
+      },
+      {
+        "color": "rgb(184, 177, 255)",
+        "normalized": "#b8b1ff",
+        "count": 240,
+        "confidence": "high",
+        "sources": [
+          "communication-link"
+        ],
+        "lch": "lch(75.36% 42.24 296.93)",
+        "oklch": "oklch(79.49% 0.11 287.74)"
+      }
+    ],
+    "cssVariables": {
+      "--tw-ring-color": {
+        "value": "rgb(59 130 246 / .5)"
+      },
+      "--swiper-theme-color": {
+        "value": "#007aff",
+        "lch": "lch(53.1% 76.92 287.04)",
+        "oklch": "oklch(60.28% 0.218 257.42)"
+      }
+    }
+  },
+  "typography": {
+    "styles": [
+      {
+        "context": "heading-1",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "95.76px (5.99rem)",
+        "weight": 600,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "42.56px (2.66rem)",
+        "weight": 600,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "31.92px (2.00rem)",
+        "weight": 600,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "31.92px (2.00rem)",
+        "weight": 500,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "31.92px (2.00rem)",
+        "weight": 500,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "23.94px (1.50rem)",
+        "weight": 600,
+        "lineHeight": "1.11",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "23.94px (1.50rem)",
+        "weight": 500,
+        "lineHeight": "1.56",
+        "spacing": "-0.3458px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "Times New Roman",
+        "fallbacks": null,
+        "size": "21.28px (1.33rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "Times New Roman",
+        "fallbacks": null,
+        "size": "21.28px (1.33rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "21.28px (1.33rem)",
+        "weight": 500,
+        "lineHeight": "1.50",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "21.28px (1.33rem)",
+        "weight": 500,
+        "lineHeight": "1.50",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "21.28px (1.33rem)",
+        "weight": 500,
+        "lineHeight": "1.50",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "21.28px (1.33rem)",
+        "weight": 500,
+        "lineHeight": "1.13",
+        "spacing": null,
+        "transform": "uppercase"
+      },
+      {
+        "context": "heading-1",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "21.28px (1.33rem)",
+        "weight": 400,
+        "lineHeight": "1.13",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "21.28px (1.33rem)",
+        "weight": 500,
+        "lineHeight": "1.13",
+        "spacing": null,
+        "transform": "uppercase"
+      },
+      {
+        "context": "heading-1",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "21.28px (1.33rem)",
+        "weight": 600,
+        "lineHeight": "1.13",
+        "spacing": null,
+        "transform": "uppercase"
+      },
+      {
+        "context": "link",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "21.28px (1.33rem)",
+        "weight": 400,
+        "lineHeight": "1.50",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "15.96px (1.00rem)",
+        "weight": 400,
+        "lineHeight": "1.17",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "Graphik LC",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, system-ui, Roboto, Segoe UI, Helvetica Neue",
+        "size": "0px (0.00rem)",
+        "weight": 500,
+        "lineHeight": "Infinity",
+        "spacing": "-0.3458px",
+        "transform": null
+      }
+    ],
+    "sources": {
+      "googleFonts": [],
+      "adobeFonts": false,
+      "variableFonts": false
+    }
+  },
+  "spacing": {
+    "scaleType": "custom",
+    "commonValues": [
+      {
+        "px": "2.66px",
+        "rem": "0.17rem",
+        "count": 4,
+        "numericValue": 2.66
+      },
+      {
+        "px": "9.31px",
+        "rem": "0.58rem",
+        "count": 1,
+        "numericValue": 9.31
+      },
+      {
+        "px": "10.64px",
+        "rem": "0.67rem",
+        "count": 12,
+        "numericValue": 10.64
+      },
+      {
+        "px": "10.7031px",
+        "rem": "0.67rem",
+        "count": 1,
+        "numericValue": 10.7031
+      },
+      {
+        "px": "13.3px",
+        "rem": "0.83rem",
+        "count": 4,
+        "numericValue": 13.3
+      },
+      {
+        "px": "15.96px",
+        "rem": "1.00rem",
+        "count": 18,
+        "numericValue": 15.96
+      },
+      {
+        "px": "21.28px",
+        "rem": "1.33rem",
+        "count": 22,
+        "numericValue": 21.28
+      },
+      {
+        "px": "26.6px",
+        "rem": "1.66rem",
+        "count": 4,
+        "numericValue": 26.6
+      },
+      {
+        "px": "30.59px",
+        "rem": "1.91rem",
+        "count": 6,
+        "numericValue": 30.59
+      },
+      {
+        "px": "31.92px",
+        "rem": "2.00rem",
+        "count": 73,
+        "numericValue": 31.92
+      },
+      {
+        "px": "34.6406px",
+        "rem": "2.17rem",
+        "count": 5,
+        "numericValue": 34.6406
+      },
+      {
+        "px": "42.56px",
+        "rem": "2.66rem",
+        "count": 2,
+        "numericValue": 42.56
+      },
+      {
+        "px": "53.2px",
+        "rem": "3.33rem",
+        "count": 7,
+        "numericValue": 53.2
+      },
+      {
+        "px": "63.84px",
+        "rem": "3.99rem",
+        "count": 1,
+        "numericValue": 63.84
+      },
+      {
+        "px": "74.48px",
+        "rem": "4.66rem",
+        "count": 5,
+        "numericValue": 74.48
+      },
+      {
+        "px": "77.2031px",
+        "rem": "4.83rem",
+        "count": 2,
+        "numericValue": 77.2031
+      },
+      {
+        "px": "93.1px",
+        "rem": "5.82rem",
+        "count": 208,
+        "numericValue": 93.1
+      },
+      {
+        "px": "212.8px",
+        "rem": "13.30rem",
+        "count": 3,
+        "numericValue": 212.8
+      },
+      {
+        "px": "319.2px",
+        "rem": "19.95rem",
+        "count": 7,
+        "numericValue": 319.2
+      },
+      {
+        "px": "425.6px",
+        "rem": "26.60rem",
+        "count": 1,
+        "numericValue": 425.6
+      }
+    ]
+  },
+  "borderRadius": {
+    "values": [
+      {
+        "value": "5.32px",
+        "count": 8,
+        "elements": [
+          "badge"
+        ],
+        "confidence": "medium",
+        "numericValue": 5.32
+      },
+      {
+        "value": "6.916px",
+        "count": 1,
+        "elements": [
+          "tui-pagination"
+        ],
+        "confidence": "low",
+        "numericValue": 6.916
+      },
+      {
+        "value": "7.98px",
+        "count": 12,
+        "elements": [
+          "cu-site-kit-ui-deffered-image",
+          "img"
+        ],
+        "confidence": "high",
+        "numericValue": 7.98
+      },
+      {
+        "value": "10.491px",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low",
+        "numericValue": 10.491
+      },
+      {
+        "value": "10.64px",
+        "count": 86,
+        "elements": [
+          "a",
+          "button",
+          "div",
+          "image",
+          "Подробнее"
+        ],
+        "confidence": "high",
+        "numericValue": 10.64
+      },
+      {
+        "value": "10.64px 10.64px 0px 0px",
+        "count": 3,
+        "elements": [
+          "image"
+        ],
+        "confidence": "low",
+        "numericValue": 10.64
+      },
+      {
+        "value": "21.28px",
+        "count": 1,
+        "elements": [
+          "section"
+        ],
+        "confidence": "low",
+        "numericValue": 21.28
+      },
+      {
+        "value": "133px",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low",
+        "numericValue": 133
+      },
+      {
+        "value": "9999px",
+        "count": 5,
+        "elements": [
+          "div"
+        ],
+        "confidence": "medium",
+        "numericValue": 9999
+      },
+      {
+        "value": "50%",
+        "count": 3,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low",
+        "numericValue": 50
+      }
+    ]
+  },
+  "borders": {
+    "combinations": [
+      {
+        "width": "1px",
+        "style": "solid",
+        "color": "rgb(69, 69, 69)",
+        "count": 12,
+        "elements": [
+          "cu-site-kit-ui-badge",
+          "button",
+          "card"
+        ],
+        "confidence": "high"
+      },
+      {
+        "width": "1px 0px 0px",
+        "style": "solid none none",
+        "color": "rgb(69, 69, 69)",
+        "count": 7,
+        "elements": [
+          "div"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "width": "0px 0px 0px 1px",
+        "style": "none none none solid",
+        "color": "rgb(255, 255, 255)",
+        "count": 3,
+        "elements": [
+          "li"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "1px 0px 0px",
+        "style": "solid",
+        "color": "rgb(69, 69, 69)",
+        "count": 2,
+        "elements": [
+          "hr"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "1px",
+        "style": "dashed",
+        "color": "rgb(69, 69, 69)",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "2px",
+        "style": "solid",
+        "color": "rgb(119, 90, 255)",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "1px 0px 0px",
+        "style": "dashed none none",
+        "color": "rgb(69, 69, 69)",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low"
+      }
+    ]
+  },
+  "shadows": [],
+  "components": {
+    "buttons": [
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px",
+            "borderRadius": "10.64px",
+            "border": "1px solid rgb(69, 69, 69)",
+            "boxShadow": "none",
+            "outline": "rgba(0, 0, 0, 0) solid 2px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "var(--cu-site-base-primary-on_dark-normal)"
+          },
+          "active": {
+            "boxShadow": "0 0 0 1px var(--cu-site-color-white)",
+            "transform": "none"
+          },
+          "focus": {}
+        },
+        "fontWeight": "500",
+        "fontSize": "0px",
+        "classes": "arrow-button",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px",
+            "borderRadius": "10.64px",
+            "border": "0px none rgb(255, 255, 255)",
+            "boxShadow": "none",
+            "outline": "rgba(0, 0, 0, 0) solid 2px",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "var(--cu-site-base-primary-on_dark-normal)"
+          },
+          "active": {
+            "boxShadow": "0 0 0 1px var(--cu-site-color-white)",
+            "transform": "none"
+          },
+          "focus": {}
+        },
+        "fontWeight": "500",
+        "fontSize": "0px",
+        "classes": "t-button t-button_small",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(61, 61, 61)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px",
+            "borderRadius": "10.64px",
+            "border": "0px none rgb(69, 69, 69)",
+            "boxShadow": "none",
+            "outline": "rgba(0, 0, 0, 0) solid 2px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "var(--cu-site-base-primary-on_dark-normal)"
+          },
+          "active": {
+            "boxShadow": "0 0 0 1px var(--cu-site-color-white)",
+            "transform": "none"
+          },
+          "focus": {}
+        },
+        "fontWeight": "500",
+        "fontSize": "0px",
+        "classes": "t-button t-button_small",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(20, 20, 20)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "31.92px",
+            "borderRadius": "10.64px",
+            "border": "1px solid rgb(69, 69, 69)",
+            "boxShadow": "none",
+            "outline": "rgba(0, 0, 0, 0) solid 2px",
+            "transform": "matrix(1, 0, 0, 1, -31.5026, 5.14533)",
+            "opacity": "1"
+          },
+          "hover": {
+            "backgroundColor": "var(--cu-site-outline-badge-hover-bg-color, #fafafa0f)",
+            "color": "var(--cu-site-text-accent-blue)",
+            "boxShadow": "0 0 0 1px var(--cu-site-color-white)",
+            "transform": "translate(1rem, -15.5rem)",
+            "opacity": "1"
+          },
+          "active": {
+            "boxShadow": "0 0 0 1px var(--cu-site-color-white)",
+            "transform": "none",
+            "opacity": "0.48"
+          },
+          "focus": {
+            "color": "var(--cu-site-color-white)",
+            "boxShadow": "0 0 0 1px var(--cu-site-color-white)",
+            "transform": "translateY(-110%)",
+            "outline": "none",
+            "border": "1px solid var(--cu-site-base-primary-pressed)"
+          }
+        },
+        "fontWeight": "500",
+        "fontSize": "23.94px",
+        "classes": "social-button",
+        "confidence": "medium"
+      }
+    ],
+    "inputs": {
+      "text": [],
+      "checkbox": [],
+      "radio": [],
+      "select": []
+    },
+    "links": [
+      {
+        "color": "rgb(255, 255, 255)",
+        "textDecoration": "none",
+        "fontWeight": "400",
+        "states": {
+          "default": {
+            "color": "rgb(255, 255, 255)",
+            "textDecoration": "none"
+          },
+          "hover": null
+        }
+      },
+      {
+        "color": "rgb(250, 250, 250)",
+        "textDecoration": "none",
+        "fontWeight": "500",
+        "states": {
+          "default": {
+            "color": "rgb(250, 250, 250)",
+            "textDecoration": "none"
+          },
+          "hover": null
+        }
+      },
+      {
+        "color": "rgb(20, 20, 20)",
+        "textDecoration": "none",
+        "fontWeight": "400",
+        "states": {
+          "default": {
+            "color": "rgb(20, 20, 20)",
+            "textDecoration": "none"
+          },
+          "hover": null
+        }
+      },
+      {
+        "color": "rgb(176, 176, 176)",
+        "textDecoration": "none",
+        "fontWeight": "400",
+        "states": {
+          "default": {
+            "color": "rgb(176, 176, 176)",
+            "textDecoration": "none"
+          },
+          "hover": {
+            "color": "var(--cu-column-link-color-hover)"
+          }
+        }
+      }
+    ],
+    "badges": {
+      "all": [
+        {
+          "backgroundColor": "rgba(148, 133, 255, 0.16)",
+          "color": "rgb(148, 133, 255)",
+          "padding": "0px 7.98px",
+          "borderRadius": "5.32px",
+          "border": "0px solid rgb(148, 133, 255)",
+          "fontSize": "15.96px",
+          "fontWeight": "600",
+          "lineHeight": "18.62px",
+          "textTransform": "uppercase",
+          "letterSpacing": "normal",
+          "variant": "neutral",
+          "styleType": "filled",
+          "isRounded": false,
+          "classes": "ml-8 badge-filled font-body-xs-600 h-24 inline-fle",
+          "confidence": "high"
+        }
+      ],
+      "byVariant": {
+        "error": [],
+        "warning": [],
+        "success": [],
+        "info": [],
+        "neutral": [
+          {
+            "backgroundColor": "rgba(148, 133, 255, 0.16)",
+            "color": "rgb(148, 133, 255)",
+            "padding": "0px 7.98px",
+            "borderRadius": "5.32px",
+            "border": "0px solid rgb(148, 133, 255)",
+            "fontSize": "15.96px",
+            "fontWeight": "600",
+            "lineHeight": "18.62px",
+            "textTransform": "uppercase",
+            "letterSpacing": "normal",
+            "variant": "neutral",
+            "styleType": "filled",
+            "isRounded": false,
+            "classes": "ml-8 badge-filled font-body-xs-600 h-24 inline-fle",
+            "confidence": "high"
+          }
+        ]
+      }
+    }
+  },
+  "breakpoints": [
+    {
+      "px": "1024px"
+    }
+  ],
+  "iconSystem": [
+    {
+      "name": "SVG Icons",
+      "type": "svg"
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "Tailwind CSS",
+      "confidence": "high",
+      "evidence": "arbitrary values (e.g., top-[117px]), responsive/state modifiers"
+    },
+    {
+      "name": "DaisyUI",
+      "confidence": "high",
+      "evidence": "Tailwind + 0 DaisyUI components"
+    },
+    {
+      "name": "PrimeReact/Vue/NG",
+      "confidence": "high",
+      "evidence": "42 Prime components"
+    },
+    {
+      "name": "Fluent UI",
+      "confidence": "high",
+      "evidence": "36 Fluent components"
+    }
+  ]
+}
