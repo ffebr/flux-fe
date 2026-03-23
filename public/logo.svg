@@ -1,0 +1,13 @@
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top boundary -->
+  <line x1="0" y1="40" x2="800" y2="40" stroke="#111111" stroke-width="6" />
+  <!-- Bottom boundary -->
+  <line x1="0" y1="160" x2="800" y2="160" stroke="#111111" stroke-width="6" />
+  
+  <!-- Red Swiss Anchor Block -->
+  <rect x="40" y="40" width="120" height="120" fill="#EF4444" />
+  <rect x="40" y="40" width="120" height="120" fill="transparent" stroke="#111111" stroke-width="6" />
+  
+  <!-- Brutalist typography -->
+  <text x="200" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif" font-weight="900" font-size="110" fill="#111111" letter-spacing="-6" text-transform="uppercase">Flux Boards</text>
+</svg>
