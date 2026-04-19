@@ -11,51 +11,56 @@ export function CreateBoardForm() {
     const [state, formAction, isPending] = useActionState(createBoard, null);
 
     return (
-        <div className="w-full bg-background border-[6px] border-foreground p-8 md:p-10 relative">
-            <div className="mb-10 text-left">
-                <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-foreground leading-none">Initialize</h2>
+        <div className="w-full bg-background/80 backdrop-blur-md border border-border p-cu-8 md:p-cu-10 rounded-lg relative overflow-hidden animate-in fade-in duration-700">
+            {/* Blueprint Grid Layer */}
+            <div className="absolute inset-0 cu-blueprint pointer-events-none -z-10" />
+
+            <div className="mb-cu-10 text-left">
+                <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-none">
+                    Инициализаци<span className="text-primary">я</span>
+                </h2>
             </div>
-            <form action={formAction} className="space-y-8">
-                <div className="space-y-4 relative">
-                    <Label htmlFor="question" className="text-xl font-bold uppercase tracking-widest text-foreground block">Query String</Label>
+            <form action={formAction} className="space-y-cu-8">
+                <div className="space-y-cu-4 relative">
+                    <Label htmlFor="question" className="text-base font-semibold tracking-wide text-foreground/80 block uppercase">Текст вопроса</Label>
                     <Input
                         id="question"
                         name="question"
-                        placeholder="ENTER QUESTION HERE..."
-                        className="swiss-input text-2xl h-16 w-full"
+                        placeholder="Введите ваш вопрос"
+                        className="cu-input text-xl h-14 w-full"
                         required
                         disabled={isPending}
                     />
                 </div>
-                <div className="space-y-4 relative">
-                    <Label htmlFor="ttl" className="text-xl font-bold uppercase tracking-widest text-foreground block">Session TTL (Seconds)</Label>
+                <div className="space-y-cu-4 relative">
+                    <Label htmlFor="ttl" className="text-base font-semibold tracking-wide text-foreground/80 block uppercase">Время жизни (сек)</Label>
                     <Input
                         id="ttl"
                         name="ttl"
                         type="number"
                         defaultValue={3600}
-                        className="swiss-input text-2xl h-16 w-full"
+                        className="cu-input text-xl h-14 w-full"
                         required
                         disabled={isPending}
                     />
                 </div>
                 {state?.error && (
-                    <div className="border-[3px] border-destructive bg-background p-4 mt-8">
-                        <p className="text-lg font-bold uppercase tracking-widest text-destructive">
-                            ERROR_THROWN: {state.error}
+                    <div className="border border-destructive/50 bg-destructive/5 p-cu-4 rounded-lg">
+                        <p className="text-base font-semibold text-destructive">
+                            ОШИБКА: {state.error}
                         </p>
                     </div>
                 )}
 
-                <div className="pt-6">
-                    <Button type="submit" size="lg" className="swiss-button-primary w-full h-20 text-2xl" disabled={isPending}>
+                <div className="pt-cu-6">
+                    <Button type="submit" size="lg" className="cu-button-primary w-full h-16 text-xl rounded-lg" disabled={isPending}>
                         {isPending ? (
                             <>
-                                <Loader2 className="mr-4 h-8 w-8 animate-spin" />
-                                PROCESSING...
+                                <Loader2 className="mr-3 h-6 w-6 animate-spin" />
+                                Обработка...
                             </>
                         ) : (
-                            'EXECUTE COMMAND >'
+                            'Запустить сессию'
                         )}
                     </Button>
                 </div>

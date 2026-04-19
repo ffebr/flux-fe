@@ -1,6 +1,7 @@
 import createClient from "openapi-fetch";
 import type { paths } from "./schema";
+import { getApiUrl } from "../config";
 
 export const apiClient = createClient<paths>({
-  baseUrl: typeof window !== 'undefined' ? '/api' : (process.env.API_URL || "http://localhost:8080"),
+  baseUrl: getApiUrl(),
 });

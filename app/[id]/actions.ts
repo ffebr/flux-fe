@@ -3,21 +3,31 @@
 import { apiClient } from '@/lib/api';
 import { revalidatePath } from 'next/cache';
 
-export async function submitWord(boardId: string, prevState: any, formData: FormData) {
+export type SubmitState = { error?: string; success?: boolean } | null;
+
+export async function submitWord(boardId: string, prevState: SubmitState, formData: FormData) {
     const word = formData.get('word') as string;
 
     if (!word || word.trim().length === 0) {
         return { error: 'Please enter a valid word or response.' };
     }
 
-    const { data, error, response } = await apiClient.PATCH('/boards/{id}/words', {
-        params: {
-            path: { id: boardId },
-        },
-        body: {
-            word: word.trim(),
-        },
-    });
+    let responseData;
+    try {
+        responseData = await apiClient.PATCH('/boards/{id}/words', {
+            params: {
+                path: { id: boardId },
+            },
+            body: {
+                word: word.trim(),
+            },
+        });
+    } catch (err) {
+        console.error('[submitWord] Network Error:', err);
+        return { error: 'Ошибка сети. Не удалось отправить ответ.' };
+    }
+
+    const { error, response } = responseData;
 
     // Handle expected errors based on the openapi schema responses (e.g. 409 Conflict for expired board)
     if (response.status === 409) {

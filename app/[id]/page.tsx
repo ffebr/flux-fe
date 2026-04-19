@@ -34,8 +34,11 @@ export default async function RespondPage({ params }: { params: Promise<{ id: st
     }
 
     return (
-        <main className="min-h-screen bg-background text-foreground p-4 sm:p-8 flex flex-col items-center justify-center font-sans selection:bg-foreground selection:text-background">
-            <div className="w-full max-w-4xl">
+        <main className="min-h-screen bg-background text-foreground p-cu-8 md:p-cu-12 flex flex-col items-center justify-center font-sans selection:bg-primary selection:text-primary-foreground overflow-hidden relative">
+            {/* Blueprint Grid Layer */}
+            <div className="absolute inset-0 cu-blueprint pointer-events-none z-0" />
+
+            <div className="w-full max-w-4xl relative z-10 animate-in fade-in duration-700">
                 <RespondForm boardId={board.id} question={board.question} />
             </div>
         </main>

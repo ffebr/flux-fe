@@ -8,7 +8,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-inter: var(--font-inter);
+  --font-serif: "Times New Roman", Times, serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -17,11 +17,6 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -38,75 +33,76 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  /* Sharp corners for Swiss design */
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-xl: 0px;
-  --radius-2xl: 0px;
-  --radius-3xl: 0px;
-  --radius-4xl: 0px;
+  
+  /* Central University Tokens - Refined */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 24px;
+  
+  /* Custom Spacing (2.66px units) */
+  --spacing-cu-1: 2.66px;
+  --spacing-cu-2: 5.32px;
+  --spacing-cu-4: 10.64px;
+  --spacing-cu-6: 15.96px;
+  --spacing-cu-8: 21.28px;
+  --spacing-cu-12: 31.92px;
+  --spacing-cu-16: 42.56px;
+  --spacing-cu-20: 53.2px;
+  --spacing-cu-35: 93.1px;
 }
 
 :root {
-  /* Swiss minimal colors: Off-white bg, Deep darkest grey text, vibrant red primary */
-  --background: oklch(0.966 0.01 100);
-  /* #F4F4F0 equivalent */
-  --foreground: oklch(0.18 0.01 260);
-  /* #111 equivalent */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.01 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.01 260);
+  --background: #ffffff;
+  --foreground: #141414;
+  --card: #ffffff;
+  --card-foreground: #141414;
+  --popover: #ffffff;
+  --popover-foreground: #141414;
 
-  --primary: oklch(0.55 0.22 25);
-  /* Swiss Red #EB3324 approx */
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: #b8b1ff;
+  --primary-foreground: #141414;
 
-  --secondary: oklch(0.92 0.01 260);
-  --secondary-foreground: oklch(0.18 0.01 260);
+  --secondary: #fafafa;
+  --secondary-foreground: #141414;
 
-  --muted: oklch(0.92 0.01 260);
-  --muted-foreground: oklch(0.4 0.01 260);
+  --muted: #f5f5f5;
+  --muted-foreground: #b0b0b0;
 
-  --accent: oklch(0.92 0.01 260);
-  --accent-foreground: oklch(0.18 0.01 260);
+  --accent: #f5f5f5;
+  --accent-foreground: #141414;
 
   --destructive: oklch(0.55 0.22 25);
-  --border: oklch(0.18 0.01 260);
-  /* Strict black borders */
-  --input: oklch(0.18 0.01 260);
-  --ring: oklch(0.55 0.22 25);
-  --radius: 0px;
+  --border: #454545;
+  --input: #454545;
+  --ring: #b8b1ff;
+  --radius: 12px;
 }
 
 .dark {
-  /* Reversed strict contrast for dark mode */
-  --background: oklch(0.145 0.02 260);
-  --foreground: oklch(0.985 0.005 250);
-  --card: oklch(0.145 0.02 260);
-  --card-foreground: oklch(0.985 0.005 250);
-  --popover: oklch(0.145 0.02 260);
-  --popover-foreground: oklch(0.985 0.005 250);
+  --background: #141414;
+  --foreground: #ffffff;
+  --card: #141414;
+  --card-foreground: #ffffff;
+  --popover: #141414;
+  --popover-foreground: #ffffff;
 
-  --primary: oklch(0.6 0.22 25);
-  /* Brighter Red */
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: #b8b1ff;
+  --primary-foreground: #141414;
 
-  --secondary: oklch(0.25 0.02 260);
-  --secondary-foreground: oklch(0.985 0.005 250);
+  --secondary: #1f1f1f;
+  --secondary-foreground: #ffffff;
 
-  --muted: oklch(0.25 0.02 260);
-  --muted-foreground: oklch(0.7 0.01 260);
+  --muted: #1f1f1f;
+  --muted-foreground: #707070;
 
-  --accent: oklch(0.25 0.02 260);
-  --accent-foreground: oklch(0.985 0.005 250);
+  --accent: #1f1f1f;
+  --accent-foreground: #ffffff;
 
   --destructive: oklch(0.6 0.22 25);
-  --border: oklch(0.985 0.005 250);
-  /* Strict white borders */
-  --input: oklch(0.985 0.005 250);
-  --ring: oklch(0.6 0.22 25);
+  --border: #454545;
+  --input: #454545;
+  --ring: #b8b1ff;
 }
 
 @layer base {
@@ -120,26 +116,44 @@
 }
 
 @layer utilities {
-  .swiss-grid {
-    @apply grid gap-8 border-b-[6px] border-foreground pb-8;
+  .cu-blueprint {
+    background-image: 
+      linear-gradient(to right, var(--border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-attachment: fixed;
+    opacity: 0.15;
+  }
+
+  .cu-grid, .swiss-grid {
+    @apply grid gap-cu-8 border-b border-border pb-cu-8;
     grid-template-columns: 1fr;
   }
 
   @media (min-width: 768px) {
-    .swiss-grid {
+    .cu-grid, .swiss-grid {
       grid-template-columns: 1fr max-content;
     }
   }
 
-  .swiss-button {
-    @apply font-bold uppercase tracking-widest border-[3px] border-foreground bg-background text-foreground hover:bg-foreground hover:text-background transition-colors;
+  .cu-button, .swiss-button {
+    @apply font-medium border border-border bg-background text-foreground hover:bg-accent transition-colors px-cu-8 py-cu-2 rounded-lg;
   }
 
-  .swiss-button-primary {
-    @apply font-bold uppercase tracking-widest border-[3px] border-primary bg-primary text-primary-foreground hover:bg-background hover:text-primary transition-colors;
+  .cu-button-primary, .swiss-button-primary {
+    @apply font-medium bg-primary text-primary-foreground hover:opacity-90 transition-opacity px-cu-8 py-cu-2 rounded-lg;
   }
 
-  .swiss-input {
-    @apply border-[3px] border-foreground bg-background text-foreground font-medium rounded-none focus-visible:ring-0 focus-visible:border-primary placeholder:text-muted-foreground/60 p-4;
+  .cu-badge {
+    @apply inline-flex items-center px-cu-2 py-0.5 rounded-sm text-xs font-semibold bg-primary/15 text-primary uppercase tracking-tight;
+  }
+
+  .cu-input, .swiss-input {
+    @apply border border-border bg-background text-foreground font-medium rounded-lg focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary placeholder:text-muted-foreground/60 p-cu-4;
+  }
+
+  .cu-heading-accent::after {
+    content: attr(data-accent);
+    @apply text-primary;
   }
 }

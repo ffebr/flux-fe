@@ -11,7 +11,7 @@ export function CountdownTimer({ expiresAt }: { expiresAt: string }) {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setMounted(true);
+        Promise.resolve().then(() => setMounted(true));
         const interval = setInterval(() => {
             const remaining = Math.max(0, new Date(expiresAt).getTime() - Date.now());
             setTimeLeft(remaining);
