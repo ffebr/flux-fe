@@ -1,9 +1,8 @@
 import { create } from 'zustand';
 import type { components } from '@/lib/api/schema';
+import { getApiUrl } from '@/lib/config';
 
 type BoardResponse = components['schemas']['BoardResponse'];
-type BoardEvent = components['schemas']['BoardEvent'];
-type WordAddedEvent = components['schemas']['WordAddedEvent'];
 
 interface BoardState {
     board: BoardResponse | null;
@@ -32,7 +31,7 @@ export const useBoardStore = create<BoardState>((set, get) => ({
             currentState.eventSource.close();
         }
 
-        const apiUrl = typeof window !== 'undefined' ? '/api' : (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080');
+        const apiUrl = getApiUrl();
         const url = `${apiUrl}/boards/${boardId}/events`;
         console.log(`[SSE INIT] Attempting to connect to EventSource at: ${url}`);
 

@@ -20,7 +20,8 @@ export function ShareDialog({ boardId }: { boardId: string }) {
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            setRespondUrl(`${window.location.origin}/${boardId}`);
+            const origin = window.location.origin;
+            Promise.resolve().then(() => setRespondUrl(`${origin}/${boardId}`));
         }
     }, [boardId]);
 
@@ -32,25 +33,25 @@ export function ShareDialog({ boardId }: { boardId: string }) {
 
     return (
         <Dialog>
-            <DialogTrigger render={<Button variant="outline" className="gap-2 rounded-full font-medium" />}>
+            <DialogTrigger render={<Button variant="outline" className="gap-2 rounded-lg font-medium border-border hover:bg-accent/50 transition-colors" />}>
                 <Share2 className="h-4 w-4" />
-                Share Board
+                Поделиться
             </DialogTrigger>
-            <DialogContent className="sm:max-w-md rounded-2xl">
+            <DialogContent className="sm:max-w-md rounded-lg border-border bg-background/95 backdrop-blur-md">
                 <DialogHeader>
-                    <DialogTitle>Share Board</DialogTitle>
-                    <DialogDescription>
-                        Share this link or QR code to let others submit responses.
+                    <DialogTitle className="text-xl font-bold tracking-tight">Поделиться</DialogTitle>
+                    <DialogDescription className="text-muted-foreground">
+                        Поделитесь ссылкой или QR-кодом для сбора ответов.
                     </DialogDescription>
                 </DialogHeader>
-                <div className="flex flex-col items-center justify-center space-y-6 py-6">
-                    <div className="p-6 bg-white rounded-2xl shadow-sm border border-zinc-200">
-                        {respondUrl && <QRCodeSVG value={respondUrl} size={220} />}
+                <div className="flex flex-col items-center justify-center space-y-cu-6 py-cu-6">
+                    <div className="p-cu-6 bg-white rounded-lg border border-border/50">
+                        {respondUrl && <QRCodeSVG value={respondUrl} size={220} fgColor="#141414" />}
                     </div>
-                    <div className="flex w-full max-w-sm items-center space-x-2">
-                        <Input value={respondUrl} readOnly className="flex-1 text-sm bg-zinc-50 dark:bg-zinc-900" />
-                        <Button size="icon" onClick={onCopy} variant="secondary" className="shrink-0">
-                            {copied ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                    <div className="flex w-full max-w-sm items-center space-x-cu-2">
+                        <Input value={respondUrl} readOnly className="flex-1 text-sm bg-secondary/50 border-border rounded-lg" />
+                        <Button size="icon" onClick={onCopy} variant="secondary" className="shrink-0 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all">
+                            {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                         </Button>
                     </div>
                 </div>

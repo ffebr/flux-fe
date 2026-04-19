@@ -22,24 +22,28 @@ export function RespondForm({ boardId, question }: { boardId: string; question: 
     }, [state]);
 
     return (
-        <div className="w-full max-w-2xl mx-auto bg-background border-[6px] border-foreground p-8 md:p-12 animate-in fade-in duration-500">
-            <div className="mb-12 border-b-[4px] border-foreground pb-8">
-                <div className="text-primary uppercase tracking-widest text-sm font-black mb-4">
-                    Active Query // Input Required
+        <div className="w-full max-w-2xl mx-auto bg-background/80 backdrop-blur-md border border-border p-cu-8 md:p-cu-12 rounded-lg relative overflow-hidden animate-in fade-in duration-700">
+            {/* Blueprint Grid Layer */}
+            <div className="absolute inset-0 cu-blueprint pointer-events-none -z-10" />
+
+            <div className="mb-cu-12 border-b border-border pb-cu-8">
+                <div className="text-primary tracking-widest text-xs font-semibold mb-cu-4 uppercase">
+                    Активный запрос // Ожидание ввода
                 </div>
-                <h1 className="text-4xl sm:text-6xl font-black tracking-tighter text-foreground leading-none uppercase">
-                    {question}
+                <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-foreground leading-[1.1]">
+                    {question.slice(0, -1)}
+                    <span className="text-primary">{question.slice(-1)}</span>
                 </h1>
             </div>
 
-            <form ref={formRef} action={formAction} className="space-y-8">
-                <div className="space-y-4">
+            <form ref={formRef} action={formAction} className="space-y-cu-8">
+                <div className="space-y-cu-4">
                     <Input
                         id="word"
                         name="word"
-                        placeholder="ENTER SINGLE WORD..."
+                        placeholder="Введите краткий ответ"
                         autoComplete="off"
-                        className="swiss-input text-2xl h-20 w-full text-center uppercase"
+                        className="cu-input text-2xl h-16 w-full text-center"
                         required
                         disabled={isPending}
                         autoFocus
@@ -47,28 +51,28 @@ export function RespondForm({ boardId, question }: { boardId: string; question: 
                 </div>
 
                 {state?.error && (
-                    <div className="border-[3px] border-destructive bg-background p-4 mt-8">
-                        <p className="text-lg font-bold uppercase tracking-widest text-destructive">
-                            ERROR: {state.error}
+                    <div className="border border-destructive/50 bg-destructive/5 p-cu-4 rounded-lg">
+                        <p className="text-base font-semibold text-destructive">
+                            ОШИБКА: {state.error}
                         </p>
                     </div>
                 )}
 
                 {state?.success && (
-                    <div className="border-[3px] border-primary bg-background p-4 mt-8 text-center text-primary font-bold uppercase tracking-widest">
-                        PAYLOAD ACCEPTED. REPEAT?
+                    <div className="border border-primary/50 bg-primary/5 p-cu-4 text-center text-primary font-semibold rounded-lg">
+                        ОТВЕТ ПРИНЯТ. ЕЩЕ РАЗ?
                     </div>
                 )}
 
-                <div className="pt-8">
-                    <Button type="submit" size="lg" className="swiss-button text-2xl h-24 w-full" disabled={isPending}>
+                <div className="pt-cu-8">
+                    <Button type="submit" size="lg" className="cu-button-primary text-xl h-16 w-full rounded-lg" disabled={isPending}>
                         {isPending ? (
                             <>
-                                <Loader2 className="mr-4 h-8 w-8 animate-spin" />
-                                TRANSMITTING...
+                                <Loader2 className="mr-3 h-6 w-6 animate-spin" />
+                                Передача...
                             </>
                         ) : (
-                            'SUBMIT DATA >'
+                            'Отправить ответ'
                         )}
                     </Button>
                 </div>

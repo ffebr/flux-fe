@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Flux Boards",
-  description: "Real-time board application built with Next.js",
+  title: "Flux",
+  description: "Реал-тайм доски на базе Next.js",
 };
 
 export default function RootLayout({
